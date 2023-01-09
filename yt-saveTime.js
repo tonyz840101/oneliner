@@ -1,1 +1,1 @@
-javascript:window.location.replace(window.location.href+'&t='+document.getElementsByClassName("ytp-time-current")[0].innerHTML.split(':').reduce((p,c) => p*60 + parseInt(c),0)+'s');
+javascript:window.location.replace((function(url,pos){if(pos===-1){return url}else{return url.slice(0,pos)}})(window.location.href,window.location.href.indexOf('&t'))+'&t='+document.getElementsByClassName("ytp-time-current")[0].innerHTML.split(':').reduce((p,c) => p*60 + parseInt(c),0)+'s');
